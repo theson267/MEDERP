@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8E03F9D-D047-435A-AE2A-BA70B05ADAF3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UMSys.BusinessLayer</RootNamespace>
+    <AssemblyName>UMSys.BusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjectBase.cs" />
+    <Compile Include="DataLayer\DataLayerBase.cs" />
+    <Compile Include="InvalidBusinessObjectException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validation\BrokenRule.cs" />
+    <Compile Include="Validation\BrokenRulesList.cs" />
+    <Compile Include="Validation\ValidateRuleBase.cs" />
+    <Compile Include="Validation\ValidateRuleNotNull.cs" />
+    <Compile Include="Validation\ValidateRuleRegexMatching.cs" />
+    <Compile Include="Validation\ValidateRuleStringMaxLength.cs" />
+    <Compile Include="Validation\ValidateRuleStringRequired.cs" />
+    <Compile Include="Validation\ValidationRules.cs" />
+    <Compile Include="DataLayer\NS_KPI_U_ITEMSql.cs" />
+    <Compile Include="NS_KPI_U_ITEM.cs" />
+    <Compile Include="NS_KPI_U_ITEMFactory.cs" />
+    <Compile Include="NS_KPI_U_ITEMKeys.cs" />
+    <Compile Include="DataLayer\NS_KPI_U_ROLESql.cs" />
+    <Compile Include="NS_KPI_U_ROLE.cs" />
+    <Compile Include="NS_KPI_U_ROLEFactory.cs" />
+    <Compile Include="NS_KPI_U_ROLEKeys.cs" />
+    <Compile Include="DataLayer\NS_KPI_U_ROLEITEMSql.cs" />
+    <Compile Include="NS_KPI_U_ROLEITEM.cs" />
+    <Compile Include="NS_KPI_U_ROLEITEMFactory.cs" />
+    <Compile Include="NS_KPI_U_ROLEITEMKeys.cs" />
+    <Compile Include="DataLayer\NS_KPI_U_USERSql.cs" />
+    <Compile Include="NS_KPI_U_USER.cs" />
+    <Compile Include="NS_KPI_U_USERFactory.cs" />
+    <Compile Include="NS_KPI_U_USERKeys.cs" />
+    <Compile Include="DataLayer\NS_KPI_U_USERROLESql.cs" />
+    <Compile Include="NS_KPI_U_USERROLE.cs" />
+    <Compile Include="NS_KPI_U_USERROLEFactory.cs" />
+    <Compile Include="NS_KPI_U_USERROLEKeys.cs" />
+    <Compile Include="DataLayer\NS_KPI_USERITEMSql.cs" />
+    <Compile Include="NS_KPI_USERITEM.cs" />
+    <Compile Include="NS_KPI_USERITEMFactory.cs" />
+    <Compile Include="NS_KPI_USERITEMKeys.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

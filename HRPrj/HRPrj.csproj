@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E53BD81-4A67-4B7A-9A3D-214DCD7900DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HRPrj</RootNamespace>
+    <AssemblyName>HRPrj</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=12.0.1100.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=12.0.1100.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=10.8.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.8.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.Services\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>..\Dll\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm\frmBaseDirectory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseDirectory.designer.cs">
+      <DependentUpon>frmBaseDirectory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseDirectoryKPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmBaseDirectoryKPI.designer.cs">
+      <DependentUpon>frmBaseDirectoryKPI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\frmReportFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\frmReportFormBase.Designer.cs">
+      <DependentUpon>frmReportFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relation.cs" />
+    <Compile Include="Relations\frm_NS_ALLOWANCE_EMPLOYEE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relations\frm_NS_ALLOWANCE_EMPLOYEE.Designer.cs">
+      <DependentUpon>frm_NS_ALLOWANCE_EMPLOYEE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relations\frm_NS_CONTRACT_EMPLOYEE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relations\frm_NS_CONTRACT_EMPLOYEE.Designer.cs">
+      <DependentUpon>frm_NS_CONTRACT_EMPLOYEE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relations\frm_NS_DOCUMENTS_EMPLOYEE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relations\frm_NS_DOCUMENTS_EMPLOYEE.Designer.cs">
+      <DependentUpon>frm_NS_DOCUMENTS_EMPLOYEE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relations\frm_NS_HEALTH_EMPLOYEE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relations\frm_NS_HEALTH_EMPLOYEE.Designer.cs">
+      <DependentUpon>frm_NS_HEALTH_EMPLOYEE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relations\frm_NS_RELATION_DETAILS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relations\frm_NS_RELATION_DETAILS.Designer.cs">
+      <DependentUpon>frm_NS_RELATION_DETAILS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relations\frm_NS_RESOLVED_EMPLOYEE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relations\frm_NS_RESOLVED_EMPLOYEE.Designer.cs">
+      <DependentUpon>frm_NS_RESOLVED_EMPLOYEE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relations\frm_NS_TRAININGCOURSE_EMPLOYEE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relations\frm_NS_TRAININGCOURSE_EMPLOYEE.Designer.cs">
+      <DependentUpon>frm_NS_TRAININGCOURSE_EMPLOYEE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\frmBC0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\frmBC0.Designer.cs">
+      <DependentUpon>frmBC0.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseForm\frmBaseDirectory.resx">
+      <DependentUpon>frmBaseDirectory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmBaseDirectoryKPI.resx">
+      <DependentUpon>frmBaseDirectoryKPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\frmReportFormBase.resx">
+      <DependentUpon>frmReportFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Relations\frm_NS_ALLOWANCE_EMPLOYEE.resx">
+      <DependentUpon>frm_NS_ALLOWANCE_EMPLOYEE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relations\frm_NS_CONTRACT_EMPLOYEE.resx">
+      <DependentUpon>frm_NS_CONTRACT_EMPLOYEE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relations\frm_NS_DOCUMENTS_EMPLOYEE.resx">
+      <DependentUpon>frm_NS_DOCUMENTS_EMPLOYEE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relations\frm_NS_HEALTH_EMPLOYEE.resx">
+      <DependentUpon>frm_NS_HEALTH_EMPLOYEE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relations\frm_NS_RELATION_DETAILS.resx">
+      <DependentUpon>frm_NS_RELATION_DETAILS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relations\frm_NS_RESOLVED_EMPLOYEE.resx">
+      <DependentUpon>frm_NS_RESOLVED_EMPLOYEE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relations\frm_NS_TRAININGCOURSE_EMPLOYEE.resx">
+      <DependentUpon>frm_NS_TRAININGCOURSE_EMPLOYEE.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BugReport\BugReport.vbproj">
+      <Project>{2cd1088a-d9ff-45fb-bbcc-8794a9185409}</Project>
+      <Name>BugReport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\KPIPrj.Business\KPIPrj.BusinessLayer.csproj">
+      <Project>{9f349d46-a359-41ea-996a-e85ec5496213}</Project>
+      <Name>KPIPrj.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UM.BusinessLayer\UM.BusinessLayer.csproj">
+      <Project>{61a06b8a-90af-402b-a754-2df5c1bbafe1}</Project>
+      <Name>UM.BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UM\UM.csproj">
+      <Project>{7b31db49-8f34-424d-9aa2-7c244128a2d8}</Project>
+      <Name>UM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UMSys\UMSys.Business\UMSys.BusinessLayer.csproj">
+      <Project>{c8e03f9d-d047-435a-ae2a-ba70b05adaf3}</Project>
+      <Name>UMSys.BusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onebit_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1465377805_checked_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clip11771442016.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_swatch_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HRM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\md16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\md48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onebit16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1357827657_cross_circle_frame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1358072254_save_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1358072320_notepad_%28edit%29_16x16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1358243971_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1358243984_cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1358244011_gtk-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1358244070_Arzo Icons Icon 96 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1358866534_print_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1358866561_print_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addnew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CategoryManagementDiagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\changePass16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color_swatch_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desktop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desktop-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desktop-Icon21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desktop-Icon23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\direction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funnel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear_161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear_481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HRM1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kpi-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kpi-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kpi-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kpi-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading42.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\md161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\md481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoImageH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NoImageM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onebit_171.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\onebit161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show desktop-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show desktop-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show desktop-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show desktop-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show desktop-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show desktop-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sta12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staff12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staff16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\staff48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unfunnel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_64.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
